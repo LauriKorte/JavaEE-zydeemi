@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="ogrecipes-jpa">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>fi.jamk.javaee.ogrecipes.api.Recipe</class>
+    <class>fi.jamk.javaee.ogrecipes.api.Difficulty</class>
+    <class>fi.jamk.javaee.ogrecipes.api.DishType</class>
+    <class>fi.jamk.javaee.ogrecipes.api.AmountOfAttention</class>
+    <class>fi.jamk.javaee.ogrecipes.api.ResultType</class>
+    <class>fi.jamk.javaee.ogrecipes.api.ManufacturingTime</class>
+    
+    <class>fi.jamk.javaee.ogrecipes.api.RecipeHasIngredient</class>
+    <class>fi.jamk.javaee.ogrecipes.api.Ingredient</class>
+    <class>fi.jamk.javaee.ogrecipes.api.IngredientUnit</class>
+    <class>fi.jamk.javaee.ogrecipes.api.IngredientStorage</class>
+    <class>fi.jamk.javaee.ogrecipes.api.IngredientType</class>
+    
+    
+    <class>fi.jamk.javaee.ogrecipes.api.RecipeHistory</class>
+    <class>fi.jamk.javaee.ogrecipes.api.Rating</class>
+    <properties>
+		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://mysql.labranet.jamk.fi/H8805"/>
+		<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+		<property name="javax.persistence.jdbc.user" value="H8805"/>
+		<property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>
