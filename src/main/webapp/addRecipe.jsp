@@ -6,31 +6,32 @@
 <jsp:useBean id="attributes" class="fi.jamk.javaee.ogrecipes.control.AttributeList" />
 <jsp:useBean id="ingList" class="fi.jamk.javaee.ogrecipes.control.IngredientList" />
 
+
 ${attributes.loadAttributes()}
 ${ingList.loadIngredients()}
 Name:<input type="text" id="name"><br>
 Description:<br> <textarea id="description"></textarea><br>
-Dishtype: <select id="dishType">
+Dishtype: <select  id="dishType">
 	<c:forEach items="${attributes.dishTypes}" var="i">
 		<option value='${i.id}'>${i.name}</option>
 	</c:forEach>
 </select><br>
-Aoa: <select id="amountOfAttention">
+Amount of attention: <select id="amountOfAttention">
 	<c:forEach items="${attributes.amountOfAttentions}" var="i">
 		<option value='${i.id}'>${i.name}</option>
 	</c:forEach>
 </select><br>
-diff: <select id="difficulty">
+Difficulty: <select id="difficulty">
 	<c:forEach items="${attributes.difficulties}" var="i">
 		<option value='${i.id}'>${i.name}</option>
 	</c:forEach>
 </select><br>
-mtime: <select id="manufacturingTime">
+Manufacturing time: <select id="manufacturingTime">
 	<c:forEach items="${attributes.manufacturingTimes}" var="i">
 		<option value='${i.id}'>${i.name}  ${i.minimumTime} - ${i.maximumTime} minutes</option>
 	</c:forEach>
 </select><br>
-resultype: <select id="resultType">
+Result type: <select id="resultType">
 	<c:forEach items="${attributes.resultTypes}" var="i">
 		<option value='${i.id}'>${i.name}</option>
 	</c:forEach>

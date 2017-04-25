@@ -9,7 +9,7 @@
 
 ${recipeList.loadRecipes(param["from"],"-1")}
 
-<table style="border: 1px none;">
+<table class="w3-red w3-table w3-hoverable w3-bordered">
 	<c:forEach items="${recipeList.recipes}"  var="recipe">
 		<tr><td><a href="viewRecipe.jsp?id=${recipe.id}" value="<c:out value="${recipe.name}"/>" > <c:out value="${recipe.name}" /></a></td></tr>
 	</c:forEach>
