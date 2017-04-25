@@ -15,3 +15,19 @@
 	<td><a href="reviews.jsp">Reviews</a></td>
 	<td><a href="addRecipe.jsp">Add Recipe</a></td>
 </i></table>
+
+<c:choose>
+	<c:when test="${empty sessionScope.auth_level or sessionScope.auth_level == 0}">
+<form method="post" action="login">
+			Username:
+			<input type="text" name="user"/>Password:<input type="password" name="password"/>
+	<input type="submit" name="button" value="Login" />
+</form>
+</c:when>
+	<c:otherwise>
+		Logged in
+		<form method="post" action="login">
+	<input type="submit" name="button" value="Logout" />
+</form>
+	</c:otherwise>
+</c:choose>
