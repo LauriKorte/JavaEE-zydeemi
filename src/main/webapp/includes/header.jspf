@@ -33,15 +33,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <c:choose>
 	<c:when test="${empty sessionScope.auth_level or sessionScope.auth_level == 0}">
 <form class="w3-red w3-bar w3-center" method="post" action="login">
-			Username:
-			<input type="text" name="user"/>Password:<input type="password" name="password"/>
+			Username: 
+			<input type="text" name="user"/> Password: <input type="password" name="password"/>
 	<input type="submit" name="button" value="Login" />
 </form>
 </c:when>
 	<c:otherwise>
-		Logged in
-		<form method="post" action="login">
+	<div class="w3-right-align w3-padding-small">
+		Logged in 
+	<form method="post" action="login">
 	<input type="submit" name="button" value="Logout" />
-</form>
+	</form>
+	</div>	
 	</c:otherwise>
 </c:choose>

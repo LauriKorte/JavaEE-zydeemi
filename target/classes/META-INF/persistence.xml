@@ -24,7 +24,7 @@
 		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://mysql.labranet.jamk.fi/H8805"/>
 		<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 		<property name="javax.persistence.jdbc.user" value="H8805"/>
-		<property name="javax.persistence.jdbc.password" value=""/>
+		<property name="javax.persistence.jdbc.password" value="9sPCZ7s5HG16PvQdRARED8YakE2orlwC"/>
     </properties>
   </persistence-unit>
 </persistence>
