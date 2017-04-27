@@ -7,7 +7,7 @@
 <c:out value="${title}"/>
 </title>
 <<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -33,17 +33,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <c:choose>
 	<c:when test="${empty sessionScope.auth_level or sessionScope.auth_level == 0}">
 <form class="w3-red w3-bar w3-center" method="post" action="login">
-			Username: 
-			<input type="text" name="user"/> Password: <input type="password" name="password"/>
+			Username:
+			<input type="text" name="user"/>Password:<input type="password" name="password"/>
 	<input type="submit" name="button" value="Login" />
 </form>
 </c:when>
 	<c:otherwise>
-	<div class="w3-right-align w3-padding-small">
-		Logged in 
-	<form method="post" action="login">
+		Logged in
+		<form method="post" action="login">
 	<input type="submit" name="button" value="Logout" />
-	</form>
-	</div>	
+</form>
 	</c:otherwise>
-</c:choose>
+</c:choose></div><br><br><br><br>
