@@ -24,13 +24,7 @@ public class Login extends HttpServlet {
 	           
 	              
 	            out.print("Failed to login: <a href='/'> GO BACK</a>");	   
-	            out.print("<h2>Parametrit</h2>");
-	            // Voidaan lukea kaikki HTTP-pyyntä parametrit:
-	            java.util.Enumeration nimet = request.getParameterNames();
-	            while (nimet.hasMoreElements()) {
-	                String nimi = (String)nimet.nextElement();
-	                out.print(nimi + " ==> " + (String)request.getParameter(nimi)  + "<br/>");
-	            }
+	           
 	       }
 	    	else
 	    		response.sendRedirect("/");
